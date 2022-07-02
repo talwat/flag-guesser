@@ -3,6 +3,7 @@
   import { fade } from "svelte/transition";
 
   import { getCountries, random } from "./js/countries";
+  import { getFlagLink } from "./js/api"
 
   import Loading from "./Loading.svelte";
   import Options from "./Options.svelte";
@@ -40,7 +41,7 @@
     getCountries(4).then((result) => {
       countries = result;
       answer = countries[random(0, countries.length)];
-      imageURL = `https://countryflagsapi.com/svg/${answer.cca2}`;
+      imageURL = getFlagLink(answer);
 
       load().then(() => {
         imageLoaded = true;
