@@ -1,3 +1,12 @@
 {
-  "cSpell.words": ["Rica", "sveltejs", "Typecheck"]
+  "cSpell.words": [
+    "markdownlint",
+    "Rica",
+    "shellcheck",
+    "sveltejs",
+    "Typecheck"
+  ],
+  "yaml.schemas": {
+    "https://json.schemastore.org/github-workflow.json": "file:///Users/tal/Code/flag-guesser/.github/workflows/deploy.yml"
+  }
 }
