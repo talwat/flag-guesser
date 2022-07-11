@@ -22,7 +22,7 @@ jobs:
           node-version: 16
 
       - name: "Build site"
-        run: npm build
+        run: npm run build
 
       - name: Deploy to GitHub Pages
         if: success()
