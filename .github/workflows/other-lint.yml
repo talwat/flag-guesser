@@ -22,7 +22,7 @@ jobs:
         run: pip install --user yamllint
 
       - name: Lint normal yaml files
-        run: yamllint .
+        run: yamllint . -f github
 
       - name: Install actionlint
         id: get_actionlint
@@ -47,7 +47,7 @@ jobs:
         run: npm install -g v8r
 
       - name: Run json linter
-        run: v8r packages/*.json --schema https://json.schemastore.org/bower.json
+        run: v8r **/*.json --schema https://json.schemastore.org/bower.json
 
   markdown:
     runs-on: ubuntu-latest
